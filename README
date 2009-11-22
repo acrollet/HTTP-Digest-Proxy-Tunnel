@@ -1,0 +1,10 @@
+To use this script: Place connect.sh in your ~/bin directory, and place the following lines in your ~/.ssh/config file:
+
+====
+Host connection_name
+  ProxyCommand ~/bin/connect.sh -x proxy_hostname.example.com -p 80 -s host.to.ssh.to -g 22 -U proxy_auth_username -P proxy_auth_password
+====
+
+Then, run:
+
+ssh connection_name
